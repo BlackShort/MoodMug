@@ -1,0 +1,114 @@
+* {
+  color: #ffff;
+}
+
+.App {
+  background: #1f1f1f;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.Search {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  height: -webkit-fill-available;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+
+svg {
+  color: #ffff;
+  cursor: pointer;
+}
+
+input::placeholder {
+  color: #acacb3;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  align-items: center;
+  // background: #d3d3d342;
+  display: flex;
+  gap: 1em;
+}
+
+.Sidebar {
+  button {
+    width: -webkit-fill-available;
+  }
+}
+
+.player {
+  svg {
+    width: 1.4em;
+    height: 1.4em;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: 0.3s ease-in-out;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: #555555;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  box-shadow: 10px;
+  background: #7a7a7a;
+  transition: 0.2s;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+
+.CardHover {
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0.3em 0.5em;
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
+.CardPause {
+  height: -webkit-fill-available;
+  width: -webkit-fill-available;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  position: absolute;
+  visibility: hidden;
+  background: #00000050;
+}
+
+.CardHover:hover~.CardPause,
+.CardPause:hover {
+  visibility: visible;
+}
+
+@media screen and (max-width:'500px') {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+}
